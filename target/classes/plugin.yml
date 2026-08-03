@@ -1,0 +1,30 @@
+name: gZoneRTP
+version: 1.0.0
+main: me.gamma.zonertp.ZoneRTP
+api-version: 1.8
+author: gamma
+description: Teletransporte aleatorio en regiones de WorldEdit
+depend: [WorldEdit]
+softdepend: [WorldGuard]
+
+commands:
+  zonertp:
+    description: Comando principal de gZoneRTP
+    usage: /<command> <subcommand>
+    aliases: [zrtp, rtpzone]
+    permission: zonertp.user
+
+permissions:
+  zonertp.user:
+    description: Permite utilizar comandos RTP
+    default: true
+  zonertp.admin:
+    description: Permite gestionar zonas
+    default: op
+    children:
+      zonertp.user: true
+  zonertp.bypasscooldown:
+    description: Anular el tiempo de espera del RTP
+    default: false
+    children:
+      zonertp.user: true

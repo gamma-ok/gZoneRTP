@@ -1,0 +1,63 @@
+# ########################################
+# ZoneRTP - Configuration File
+# Versión: 1.0.0
+# ########################################
+
+# Cooldown settings
+cooldown:
+  seconds: 5
+
+# Teleport delay before actually teleporting (in seconds)
+teleport-delay:
+  seconds: 3
+
+# Sound settings
+sound:
+  enabled: true
+  name: "ENDERMAN_TELEPORT"
+
+# Messages - All messages are fully editable
+messages:
+  prefix: "&8[&6&lZoneRTP&8] &r"
+  
+  # Help messages (supports multiple lines)
+  help:
+    - "&6&lZoneRTP Help"
+    - "&e/zrtp <zona> &7- &fTeletransporta a una zona específica"
+    - "&e/zrtp random &7- &fTeletransporta a una zona aleatoria"
+    - "&e/zrtp create <nombre> &7- &fCrea una zona con selección WorldEdit"
+    - "&e/zrtp delete <nombre> &7- &fElimina una zona"
+    - "&e/zrtp list &7- &fLista todas las zonas"
+    - "&e/zrtp reload &7- &fRecarga configuración y zonas"
+
+  # Error messages
+  no-permission: "&cNo tienes permiso para usar este comando."
+  player-only: "&cEste comando solo puede ser usado por jugadores."
+  invalid-usage: "&cUso incorrecto. Usa &f/zrtp help &cpara ayuda."
+
+  # Zone management messages
+  zone-not-found: "&cLa zona &f{zone} &cno existe."
+  zone-created: "&a¡Zona &f{zone} &acreada exitosamente!"
+  zone-deleted: "&aZona &f{zone} &aeliminada."
+  zone-list: "&aZonas disponibles: &f{zones}"
+  zone-exists: "&cYa existe una zona con el nombre &f{zone}&c."
+  no-selection: "&cNo tienes una selección activa de WorldEdit."
+  no-zones: "&cNo hay zonas registradas."
+
+  # RTP messages
+  rtp-success: "&a¡Teletransportado a la zona &f{zone}&a!"
+  rtp-failed: "&cNo se pudo encontrar una ubicación segura en la zona &f{zone}&c."
+  rtp-no-space: "&cLa zona &f{zone} &cestá llena de bloques, no hay espacio para teletransportarte."
+  rtp-no-ground: "&cLa zona &f{zone} &cno tiene suelo firme, no hay dónde caer."
+  rtp-fallback: "&eTeletransportado a una ubicación de respaldo en &f{zone}&e."
+
+  # Cooldown messages
+  cooldown: "&cDebes esperar &f{seconds}s &cantes de usar RTP nuevamente."
+
+  # Teleport delay messages
+  teleport-start: "&eTeletransportando a &f{zone} &een &f{seconds}s &e(no te muevas)"
+  teleport-countdown: "&eTeletransportando en &f{seconds}s&e..."
+  teleport-cancelled-moved: "&cTeletransporte cancelado porque te moviste."
+
+  # Admin messages
+  reload-success: "&aConfiguración y zonas recargadas."
