@@ -47,12 +47,13 @@ public class RTPTask extends BukkitRunnable {
             attempts++;
             
             Location randomLoc = zone.getRandomLocation();
-            LocationUtils.SafeLocationResult result = LocationUtils.getHighestSafeLocation(randomLoc);
+            LocationUtils.SafeLocationResult result = LocationUtils.getHighestSafeLocation(randomLoc, zone);
             
             if (result.isGroundFound()) {
                 groundFoundAnyAttempt = true;
             }
             
+            // Usar isInside() en lugar de isInsideXZ() para verificar también la altura
             if (result.getLocation() != null && zone.isInside(result.getLocation())) {
                 safeLocation = result.getLocation();
                 break;

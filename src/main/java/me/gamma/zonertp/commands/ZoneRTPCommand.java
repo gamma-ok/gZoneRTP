@@ -236,7 +236,7 @@ public class ZoneRTPCommand implements CommandExecutor {
         
         // Ejecutar RTP en tarea asíncrona
         RTPTask task = new RTPTask(player, zone);
-        task.runTaskAsynchronously(plugin);
+        task.runTask(plugin);
     }
     
     /**
